@@ -45,7 +45,7 @@ public class UserControllerTests {
 
 	@Before
 	public void setup() {
-		// 获取mockMvc实例
+		// 获取mockMvc实例 ce
 		this.mockMvc = webAppContextSetup(this.wac).build();
 	}
 
