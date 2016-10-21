@@ -1,4 +1,4 @@
-package com.xinchen.ssm.utils;
+package com.xinchen.ssm.demo.utils;
 /**   
 * @Description: 
 * @author xinchen 2016年8月27日 下午7:57:25   

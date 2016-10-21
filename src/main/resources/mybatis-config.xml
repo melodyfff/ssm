@@ -18,7 +18,7 @@
       
   	<!-- 开启别名 -->
      <typeAliases>
-        <typeAlias type="com.xinchen.ssm.entity.User" alias="User"/>
+        <typeAlias type="com.xinchen.ssm.demo.entity.User" alias="User"/>
     </typeAliases> 
     
     <mappers>

@@ -1,4 +1,4 @@
-package com.xinchen.ssm.controller;
+package com.xinchen.ssm.demo.controller;
 
 import java.util.HashMap;
 import java.util.List;
@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.xinchen.ssm.entity.User;
-import com.xinchen.ssm.service.UserService;
-import com.xinchen.ssm.utils.PageUtil;
+import com.xinchen.ssm.demo.entity.User;
+import com.xinchen.ssm.demo.service.UserService;
+import com.xinchen.ssm.demo.utils.PageUtil;
 
 /**   
 * @Description: 分页
@@ -34,7 +34,7 @@ public class PagingController {
 	@ResponseBody   // 这个注解说明返回的是一个对象，不需要当做jsp 处理。   //@RequestBody注解请求参数在请求体里
 	public  Map<String,Object> page(@RequestBody PageUtil pageUtil){
 		//存储所有的信息,方面返回json串
-        Map<String,Object> model = new HashMap<>();
+        Map<String,Object> model = new HashMap();
         
         System.out.println("limit--->"+pageUtil.getLimit()+"offset--->"+pageUtil.getOffset()+
         					"order"+pageUtil.getOrder()+"ordername"+pageUtil.getOrdername()

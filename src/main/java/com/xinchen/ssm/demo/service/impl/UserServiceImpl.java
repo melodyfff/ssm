@@ -1,15 +1,15 @@
-package com.xinchen.ssm.service.impl;
+package com.xinchen.ssm.demo.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.xinchen.ssm.dao.UserDao;
-import com.xinchen.ssm.dao.UserMapper;
-import com.xinchen.ssm.entity.User;
-import com.xinchen.ssm.service.UserService;
-import com.xinchen.ssm.utils.PageUtil;
+import com.xinchen.ssm.demo.dao.UserDao;
+import com.xinchen.ssm.demo.dao.UserMapper;
+import com.xinchen.ssm.demo.entity.User;
+import com.xinchen.ssm.demo.service.UserService;
+import com.xinchen.ssm.demo.utils.PageUtil;
 
 /**   
 * @Description: 
@@ -18,18 +18,18 @@ import com.xinchen.ssm.utils.PageUtil;
 */
 @Service("userService")
 public class UserServiceImpl implements UserService {
-	 @Autowired
-	 private UserMapper userMapper;
+//	 @Autowired
+//	 private UserMapper userMapper;
 	
 	 @Autowired
 	 private UserDao userDao;
 	 
 	//此为只实现Dao接口，不需要impl实现类的写法
-	@Override
-	public List<User> loadUsers() {
-		// TODO Auto-generated method stub
-		return userMapper.queryAll();
-	}
+	//@Override
+//	public List<User> loadUsers() {
+//		// TODO Auto-generated method stub
+//		return userMapper.queryAll();
+//	}
  
 	@Override
 	public List<User> loadUsers2() {

@@ -1,4 +1,4 @@
-package com.xinchen.ssm.controller;
+package com.xinchen.ssm.demo.controller;
 
 import java.util.List;
 
@@ -9,8 +9,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.xinchen.ssm.entity.User;
-import com.xinchen.ssm.service.UserService;
+import com.xinchen.ssm.demo.entity.User;
+import com.xinchen.ssm.demo.service.UserService;
 
 /**   
 * @Description: 

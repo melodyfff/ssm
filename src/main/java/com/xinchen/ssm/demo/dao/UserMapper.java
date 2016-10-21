@@ -1,17 +1,17 @@
-package com.xinchen.ssm.dao;
+package com.xinchen.ssm.demo.dao;
 
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.xinchen.ssm.entity.User;
+import com.xinchen.ssm.demo.entity.User;
 
 /**   
 * @Description: 
 * @author xinchen  
 * @date 2016年8月14日 下午7:04:16   
 */
-@Repository(value="userMapper")
+//@Repository(value="userMapper")
 public interface UserMapper {
 	
 	/** 
