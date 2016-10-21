@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
  <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!-- com.xinchen.ssm.dao.UserMapper -->
-<!-- com.xinchen.ssm.dao.UserDao -->
+<!-- UserMapper -->
+<!-- UserDao -->
 <!-- 命名空间的名字要和Dao里面的接口名一致，不然会报错：org.apache.ibatis.binding.BindingException: 
 	Invalid bound statement (not found): -->
-<mapper namespace="com.xinchen.ssm.dao.UserDao">
-	<resultMap type="com.xinchen.ssm.entity.User" id="User">
+<mapper namespace="com.xinchen.ssm.demo.dao.UserDao">
+	<resultMap type="com.xinchen.ssm.demo.entity.User" id="User">
 		<result column="id" property="id" jdbcType="INTEGER" />
 		<result column="username" property="username" jdbcType="VARCHAR" />
 		<result column="password" property="password" jdbcType="VARCHAR" />
@@ -18,7 +18,7 @@
 	</sql>
 
 	<!-- 分页 -->
-	<select id="page" parameterType="com.xinchen.ssm.utils.PageUtil" resultMap="User" >
+	<select id="page" parameterType="com.xinchen.ssm.demo.utils.PageUtil" resultMap="User" >
 		select * from user 
 		<trim prefix="WHERE" prefixOverrides="AND | OR" >
             <if test="search != null">
@@ -32,7 +32,7 @@
         LIMIT #{offset}, #{limit}
 	</select>
 	
-	<select id="pageCount" parameterType="com.xinchen.ssm.utils.PageUtil" resultType="int">
+	<select id="pageCount" parameterType="com.xinchen.ssm.demo.utils.PageUtil" resultType="int">
 		SELECT COUNT(*) from user 
 		<trim prefix="WHERE" prefixOverrides="AND | OR" >
             <if test="search != null">
@@ -55,7 +55,7 @@
 			username = #{username}
 	</select>
 	<!-- 添加新用户 -->
-	<insert id="save" parameterType="com.xinchen.ssm.entity.User"
+	<insert id="save" parameterType="com.xinchen.ssm.demo.entity.User"
 		useGeneratedKeys="true" keyProperty="id">
 		INSERT INTO
 			 user (username,password)
@@ -67,7 +67,7 @@
 		</selectKey>
 	</insert>
 	<!-- 修改用户密码 -->
-	<update id="update" parameterType="com.xinchen.ssm.entity.User">
+	<update id="update" parameterType="com.xinchen.ssm.demo.entity.User">
 		UPDATE user
 		SET 
 			password = #{password}

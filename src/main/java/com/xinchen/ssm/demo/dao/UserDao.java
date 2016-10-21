@@ -1,9 +1,9 @@
-package com.xinchen.ssm.dao;
+package com.xinchen.ssm.demo.dao;
 
 import java.util.List;
 
-import com.xinchen.ssm.entity.User;
-import com.xinchen.ssm.utils.PageUtil;
+import com.xinchen.ssm.demo.entity.User;
+import com.xinchen.ssm.demo.utils.PageUtil;
 
 /**   
 * @Description: 

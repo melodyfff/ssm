@@ -1,4 +1,4 @@
-package com.xinchen.ssm.entity;
+package com.xinchen.ssm.demo.entity;
 /**   
 * @Description:User实体类
 * @author xinchen  

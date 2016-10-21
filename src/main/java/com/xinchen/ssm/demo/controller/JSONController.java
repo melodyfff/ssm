@@ -1,4 +1,4 @@
-package com.xinchen.ssm.controller;
+package com.xinchen.ssm.demo.controller;
 
 
 import java.util.HashMap;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.xinchen.ssm.entity.User;
+import com.xinchen.ssm.demo.entity.User;
 
 /** 
 * @ClassName: JSONController 

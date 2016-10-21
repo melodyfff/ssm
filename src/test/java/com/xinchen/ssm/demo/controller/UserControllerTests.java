@@ -1,4 +1,4 @@
-package com.xinchen.ssm.controller;
+package com.xinchen.ssm.demo.controller;
 
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.webAppContextSetup;
 
@@ -31,7 +31,7 @@ import org.springframework.test.context.web.WebAppConfiguration;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
-@ContextConfiguration(locations = { "classpath:springmvc-context.xml","classpath*:applicationcontext-*.xml"})
+@ContextConfiguration(locations = { "classpath:springmvc-context-test.xml","classpath*:applicationcontext-*-test.xml"})
 public class UserControllerTests {
 	private static final Log log = LogFactory.getLog(UserControllerTests.class);
 	private MockMvc mockMvc;

@@ -1,9 +1,9 @@
-package com.xinchen.ssm.service;
+package com.xinchen.ssm.demo.service;
 
 import java.util.List;
 
-import com.xinchen.ssm.entity.User;
-import com.xinchen.ssm.utils.PageUtil;
+import com.xinchen.ssm.demo.entity.User;
+import com.xinchen.ssm.demo.utils.PageUtil;
 
 /**   
 * @Description: 
@@ -16,7 +16,7 @@ public interface UserService {
 	* @Description: TODO 加载用户  
 	* @return List<User>     
 	*/
-	public List<User> loadUsers();
+	//public List<User> loadUsers();
 	public List<User> loadUsers2();
 	/** 
 	* @Title: save

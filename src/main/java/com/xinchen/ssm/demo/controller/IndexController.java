@@ -1,4 +1,4 @@
-package com.xinchen.ssm.controller;
+package com.xinchen.ssm.demo.controller;
 
 import java.io.IOException;
 
