@@ -16,6 +16,10 @@
                         http://www.springframework.org/schema/aop
                      	http://www.springframework.org/schema/aop/spring-aop.xsd">
 
+
+    <!-- 自动扫描 --><!-- 启用注释驱动自动注入的功能 -->
+    <context:component-scan base-package="com.xinchen.ssm.quartz.controller,com.xinchen.ssm.quartz.service" />
+
     <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
         <property name="dataSource" ref="dataSource" />
         <property name="schedulerName" value="TestScheduler1"/>
