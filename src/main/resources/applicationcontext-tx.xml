@@ -17,5 +17,21 @@
 		<property name="dataSource" ref="dataSource" />
 	</bean>
 	<!-- 事务注解支持 -->
-    <tx:annotation-driven transaction-manager="transactionManager" />
+    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="detail*" propagation="SUPPORTS" />
+			<tx:method name="visit*" propagation="SUPPORTS" />
+			<tx:method name="get*" propagation="SUPPORTS" />
+			<tx:method name="find*" propagation="SUPPORTS" />
+			<tx:method name="check*" propagation="SUPPORTS" />
+			<tx:method name="list*" propagation="SUPPORTS" />
+			<tx:method name="*" propagation="REQUIRED" rollback-for="exception" />
+		</tx:attributes>
+	</tx:advice>
+
+	<aop:config>
+		<aop:pointcut id="txoperation" expression="execution(* com.xinchen.ssm.demo.service.impl.*.*(..))" />
+		<aop:advisor pointcut-ref="txoperation" advice-ref="txAdvice" />
+	</aop:config>
 </beans>
