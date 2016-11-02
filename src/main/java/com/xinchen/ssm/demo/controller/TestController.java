@@ -46,7 +46,7 @@ public class TestController {
 	// pass the parameters to front-end using ajax
 	@RequestMapping("mvc/getPerson")
 	public void getPerson(String name, PrintWriter pw) {
-		pw.write("hello," + name);
+		pw.write("PrintWriter:hello," + name);
 	}
 
 	@RequestMapping("mvc/name")
