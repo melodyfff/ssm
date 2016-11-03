@@ -22,7 +22,7 @@
 		</div>
 		<!-- add user -->
 		<div class="row">
-			<form action="${pageContext.request.contextPath}/user/add" class="form-inline">
+			<form action="${pageContext.request.contextPath}/user/add" class="form-inline" method="post">
 				<div class="form-group " >
 					<label for="exampleInputEmail3">username</label> 
 					<input type="text" class="form-control" id="username" name="userName"
@@ -38,7 +38,7 @@
 		</div>
 		<!-- update user -->
 		<div class="row">
-			<form action="user/update" class="form-inline">
+			<form action="user/update" class="form-inline" method="post">
 				<div class="form-group " >
 					<label for="exampleInputEmail3">username</label> 
 					<input type="text" class="form-control" id="userName" name="userName"
@@ -55,7 +55,7 @@
 		
 		<!-- delete user -->
 		<div class="row">
-			<form action="user/delete" class="form-inline">
+			<form action="user/delete" class="form-inline" method="post">
 				<div class="form-group " >
 					<label for="exampleInputEmail3">username</label> 
 					<input type="text" class="form-control" id="username" name="userName"
@@ -68,7 +68,7 @@
 		
 		<!-- 查找用户 -->
 		<div class="row">
-			<form action="user/find" class="form-inline">
+			<form action="user/find" class="form-inline" method="post">
 				<div class="form-group " >
 					<label for="exampleInputEmail3">username</label> 
 					<input type="text" class="form-control" id="username" name="userName"
