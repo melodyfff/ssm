@@ -5,12 +5,14 @@ import java.util.List;
 import org.apache.log4j.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.xinchen.ssm.demo.entity.User;
 import com.xinchen.ssm.demo.service.UserService;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 /**   
 * @Description: 
@@ -49,7 +51,7 @@ public class UserController {
 	 * @param password
 	 * @return
 	 */
-	@RequestMapping("add")
+	@RequestMapping(value="add",method = RequestMethod.POST)
 	public String addUser(Model model,String userName,String password){
 		
 		User user = new User();
@@ -79,7 +81,7 @@ public class UserController {
 	 * @param password
 	 * @return
 	 */
-	@RequestMapping("update")
+	@RequestMapping(value="update",method = RequestMethod.POST)
 	public String updateUser(Model model,String userName,String password){
 		
 		User user = new User();
@@ -108,7 +110,7 @@ public class UserController {
 	 * @param password
 	 * @return
 	 */
-	@RequestMapping("delete")
+	@RequestMapping(value = "delete",method = RequestMethod.POST)
 	public String deleteUser(Model model,String userName){
 		if(userName != "" && userName != null){
 			try{
@@ -126,7 +128,7 @@ public class UserController {
 				return "showuser";	
 	}
 	
-	@RequestMapping("find")
+	@RequestMapping(value = "find",method = RequestMethod.POST)
 	public String findUser(Model model,String userName){
 		if(userName != "" && userName != null){
 			try{
