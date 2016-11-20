@@ -31,7 +31,7 @@
 	</tx:advice>
 
 	<aop:config>
-		<aop:pointcut id="txoperation" expression="execution(* com.xinchen.ssm.demo.service.impl.*.*(..))" />
+		<aop:pointcut id="txoperation" expression="execution(* com.xinchen.ssm.*.service.impl.*.*(..))" />
 		<aop:advisor pointcut-ref="txoperation" advice-ref="txAdvice" />
 	</aop:config>
 </beans>

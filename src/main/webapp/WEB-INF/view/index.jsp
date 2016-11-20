@@ -12,7 +12,7 @@
 <script src="static/js/jquery.min.js"></script>
 <script src="static/js/bootstrap.min.js"></script>
 
-<title>index</title>
+<title>view/index</title>
 </head>
 <body>
 	<div class="container">

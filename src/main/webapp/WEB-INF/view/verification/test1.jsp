@@ -7,6 +7,7 @@
 <link href="${pageContext.request.contextPath}/static/css/bootstrap.min.css" rel="stylesheet">
 <script src="${pageContext.request.contextPath}/static/js/jquery.min.js"></script>
 <script src="${pageContext.request.contextPath}/static/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
 <title>Insert title here</title>
 
 <script type="text/javascript">
@@ -18,7 +19,7 @@ function chageCode(){
 $(document).ready(function() { 
 $("#loginUser").validate({
         rules:{
-            name:{ required:true},
+            name:{required:true},
             password:{required:true},
             authCode:{required:true,checkCode:true}
         },
@@ -58,7 +59,7 @@ jQuery.validator.addMethod("checkCode", function(value, element) {
         <label><img type="image" src="authCode" id="codeImage" onclick="chageCode()" title="图片看不清？点击重新得到验证码" style="cursor:pointer;"/></label>
         <label><a onclick="chageCode()">换一张</a></label>
     </div>
-    <input type="button" class="btn btn-default"  onclick="subm()" value="登录"/>
+    <input type="button" class="btn btn-default"  onclick="subm()" value="登录">
 </form>
 </body>
 </html>
