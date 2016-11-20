@@ -15,22 +15,22 @@ http://www.springframework.org/schema/security/spring-security.xsd">
     <!--<http pattern="/assets/**" security="none" />-->
     <!--<http pattern="/**/*.jsp" security="none" />-->
 
-    <!--配置保护资源-->
-    <http auto-config="true">
+    <!--&lt;!&ndash;配置保护资源&ndash;&gt;-->
+    <!--<http auto-config="true">-->
 
-        <intercept-url pattern="/*" access="ROLE_USER" />
-        <logout invalidate-session="true"
-                logout-success-url="/"
-                logout-url="/showuser"/>
-    </http>
-    <!-- 配置用户 -->
-    <authentication-manager alias="authenticationManager">
-    <authentication-provider>
-        <user-service>
-            <user name="sam" password="sam" authorities="ROLE_USER"/>
-            <user name="admin" password="admin" authorities="ROLE_ADMIN" />
-        </user-service>
-    </authentication-provider>
-    </authentication-manager>
+        <!--<intercept-url pattern="/*" access="ROLE_USER" />-->
+        <!--<logout invalidate-session="true"-->
+                <!--logout-success-url="/"-->
+                <!--logout-url="/showuser"/>-->
+    <!--</http>-->
+    <!--&lt;!&ndash; 配置用户 &ndash;&gt;-->
+    <!--<authentication-manager alias="authenticationManager">-->
+    <!--<authentication-provider>-->
+        <!--<user-service>-->
+            <!--<user name="sam" password="sam" authorities="ROLE_USER"/>-->
+            <!--<user name="admin" password="admin" authorities="ROLE_ADMIN" />-->
+        <!--</user-service>-->
+    <!--</authentication-provider>-->
+    <!--</authentication-manager>-->
 
 </beans:beans>
