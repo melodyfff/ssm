@@ -11,7 +11,7 @@
     <!--  Spring-Security 的配置 -->
     <security:http auto-config="true" use-expressions="true" >
         <security:csrf disabled="true"/>
-        <security:intercept-url pattern="/login" access="permitAll"/>
+        <security:intercept-url pattern="/security/login" access="permitAll"/>
         <!-- <security:intercept-url pattern="/mypermission" access="hasRole('ROLE_USER')"/>  -->
         <security:intercept-url pattern="/security/admin" access="hasRole('ROLE_ADMIN')"/>
         <security:intercept-url pattern="/security/common" access="hasRole('ROLE_USER')"/>
